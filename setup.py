@@ -32,12 +32,6 @@ To install MySQL Connector/Python:
 """
 
 from setuptools import setup
-from setuptools.command.install import INSTALL_SCHEMES
-
-# Make sure that data files are actually installed in the package directory
-for install_scheme in INSTALL_SCHEMES.values():
-    install_scheme['data'] = install_scheme['purelib']
-
 import setupinfo
 try:
     from cpyint import metasetupinfo
